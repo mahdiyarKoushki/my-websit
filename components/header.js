@@ -24,7 +24,7 @@ export default function Header() {
     { name: "نقشه راه", href: "/roadmap" },
     { name: "نمونه کارها", href: "/portfolio" },
     { name: "چارت‌ها", href: "/charts" },
-    { name: "وبلاگ", href: "/blog" },
+    // { name: "وبلاگ", href: "/blog" },
     // { name: "ویدیوها", href: "/videos" },
     { name: "تماس با من", href: "/contact" },
   ]
