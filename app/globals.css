@@ -3,19 +3,105 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 240, 240, 240;
+
+  --primary: 59, 130, 246;
+  --primary-foreground: 255, 255, 255;
+
+  --secondary: 99, 102, 241;
+  --secondary-foreground: 255, 255, 255;
+
+  --accent: 244, 63, 94;
+  --accent-foreground: 255, 255, 255;
+
+  --muted: 240, 240, 240;
+  --muted-foreground: 107, 114, 128;
+
+  --card: 255, 255, 255;
+  --card-foreground: 0, 0, 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 10, 10;
+  --background-end-rgb: 30, 30, 30;
+
+  --primary: 59, 130, 246;
+  --primary-foreground: 255, 255, 255;
+
+  --secondary: 99, 102, 241;
+  --secondary-foreground: 255, 255, 255;
+
+  --accent: 244, 63, 94;
+  --accent-foreground: 255, 255, 255;
+
+  --muted: 39, 39, 42;
+  --muted-foreground: 161, 161, 170;
+
+  --card: 24, 24, 27;
+  --card-foreground: 255, 255, 255;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
+  font-family: "Vazirmatn", "Inter", sans-serif;
 }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-md transition-colors;
+  }
+
+  .card {
+    @apply bg-white dark:bg-zinc-800 rounded-lg shadow-md overflow-hidden;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold mb-6 text-center;
+  }
+
+  .container-custom {
+    @apply container mx-auto px-4 py-8;
+  }
+}
+
+/* RTL Support */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
