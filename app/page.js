@@ -2,7 +2,32 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Download, BarChart3, LineChart, PieChart } from "lucide-react"
 
+export const metadata = {
+  title: "مهدیار کوشکی | برنامه‌نویس فرانت‌اند و توسعه‌دهنده وب",
+  description: "وب‌سایت شخصی مهدیار کوشکی، برنامه‌نویس فرانت‌اند با 5 سال تجربه در توسعه وب، متخصص در React، Next.js و JavaScript. مهدی کوشکی، فرانت اند دولوپر و برنامه نویسی وبسایت.",
+  keywords: ["مهدیار کوشکی", "مهدی کوشکی", "برنامه‌نویس فرانت‌اند", "توسعه‌دهنده وب", "فرانت اند دولوپر", "برنامه نویسی وبسایت", "React", "Next.js", "JavaScript"],
+}
+
 export default function Home() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "مهدیار کوشکی",
+    "alternateName": "مهدی کوشکی",
+    "url": "https://mahdiyar.koushky.ir",
+    "image": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/-2147483648_-210168.jpg-iMjcJsFDj9g6opLNdo8JxR1FqDPsPv.jpeg",
+    "sameAs": [
+      "https://www.linkedin.com/in/mahdiyar-koushky/",
+      "https://github.com/mahdiyarKoushky"
+    ],
+    "jobTitle": "برنامه‌نویس فرانت‌اند",
+    "alumniOf": "دانشگاه آزاد اسلامی",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    }
+  };
+
   const skills = [
     { name: "HTML5", level: 95 },
     { name: "CSS3", level: 90 },
@@ -40,6 +65,10 @@ export default function Home() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
@@ -325,4 +354,3 @@ export default function Home() {
     </div>
   )
 }
-

@@ -1,15 +1,15 @@
-import { Inter } from "next/font/google"
+import { Vazirmatn } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import ThemeProvider from "@/components/theme-provider"
 
-const inter = Inter({ subsets: ["latin"] })
+const vazirmatn = Vazirmatn({ subsets: ["arabic"] })
 
 export const metadata = {
-  title: "مهدیار کوشکی",
-  description: "وب‌سایت شخصی مهدیار کوشکی، برنامه‌نویس فرانت‌اند با 5 سال تجربه در توسعه وب",
-  keywords: ["مهدیار کوشکی", "برنامه‌نویس فرانت‌اند", "توسعه‌دهنده وب", "React", "Next.js", "JavaScript"],
+  title: "مهدیار کوشکی | برنامه‌نویس فرانت‌اند و توسعه‌دهنده وب",
+  description: "وب‌سایت شخصی مهدیار کوشکی، برنامه‌نویس فرانت‌اند با 5 سال تجربه در توسعه وب، متخصص در React، Next.js و JavaScript. مهدی کوشکی، فرانت اند دولوپر و برنامه نویسی وبسایت.",
+  keywords: ["مهدیار کوشکی", "مهدی کوشکی", "برنامه‌نویس فرانت‌اند", "توسعه‌دهنده وب", "فرانت اند دولوپر", "برنامه نویسی وبسایت", "React", "Next.js", "JavaScript"],
   icons: {
     icon: "/images/profile.png",
     shortcut: "/images/profile.png",
@@ -27,7 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl">
-      <body className={inter.className}>
+      <body className={vazirmatn.className}>
         <ThemeProvider>
           <div className="flex flex-col min-h-screen">
             <Header />
