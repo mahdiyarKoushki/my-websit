@@ -1,78 +1,69 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, ExternalLink } from "lucide-react"
+import { ArrowRight, Github } from "lucide-react"
 
 export default function PortfolioPage() {
-  const categories = [
-    { id: "all", name: "همه" },
-    { id: "web", name: "وب‌سایت" },
-    { id: "dashboard", name: "داشبورد" },
-    { id: "ecommerce", name: "فروشگاه" },
-    { id: "chart", name: "چارت و نمودار" },
-  ]
-
   const projects = [
     {
       id: 1,
-      title: "داشبورد مدیریت",
-      description: "داشبورد مدیریتی با انواع چارت‌ها و نمودارها برای تحلیل داده‌ها",
+      title: "سایت شخصی ",
+      description: "",
       image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20250327_001723_538.jpg-EeKpJJh6LB3FN1ZQWxttcmgoCnQ16d.jpeg",
+               "/images/mkoushki.png",
       category: "dashboard",
-      technologies: ["React", "D3.js", "Tailwind CSS"],
-      link: "/portfolio/dashboard",
-      demoLink: "https://dashboard-demo.example.com",
+      technologies: ["html","css","js"],
+      link: "https://mkoushki.ir/",
+      demoLink: "https://mkoushki.ir/",
+      githubLink: "https://github.com/mahdiyarKoushki/mahdiyarkoushki.github.io",
     },
     {
       id: 2,
-      title: "فروشگاه آنلاین",
-      description: "فروشگاه آنلاین با قابلیت‌های سبد خرید، پرداخت و مدیریت محصولات",
-      image: "/placeholder.svg?height=300&width=400",
-      category: "ecommerce",
-      technologies: ["Next.js", "Redux", "MongoDB"],
-      link: "/portfolio/ecommerce",
-      demoLink: "https://shop-demo.example.com",
+      title: "سایت لوله کشی  ",
+      description: "وب‌سایت بهروز کوشکی، پلتفرمی برای معرفی و ارائه خدمات حرفه‌ای ساختمانی در تهران، از جمله لوله‌کشی، تشخیص ترکیدگی، رفع نم و کاشی‌کاری، با بیش از ۱۵ سال تجربه است.",
+      image:
+        "/images/lolekeshi.png",
+      category: "dashboard",
+      technologies: [ "next.js", "Tailwind CSS"],
+      link: "https://behrooz.koushky.ir",
+      demoLink: "https://behrooz.koushky.ir/",
+      githubLink: "https://github.com/mahdiyarKoushki/site-behroozkoushki",
     },
     {
       id: 3,
-      title: "وب‌سایت شرکتی",
-      description: "وب‌سایت شرکتی با طراحی مدرن و ریسپانسیو",
-      image: "/placeholder.svg?height=300&width=400",
-      category: "web",
-      technologies: ["HTML5", "CSS3", "JavaScript"],
-      link: "/portfolio/corporate",
-      demoLink: "https://corporate-demo.example.com",
+      title: "تودو لیست مایکروسافت  ",
+      description: "تودو لیست (To-Do List) یا لیست انجام کارها، یک ابزار ساده و در عین حال قدرتمند برای سازماندهی، اولویت‌بندی و مدیریت وظایف روزانه، هفتگی یا در یک بازه زمانی مشخص است.",
+      image:
+        "/images/todo.png",
+      category: "dashboard",
+      technologies: [ "react.js"],
+      link: "https://todo-list-microsoft.vercel.app/tasks",
+      demoLink: "https://todo-list-microsoft.vercel.app/tasks/",
+      githubLink: "https://github.com/mahdiyarKoushki/todo-list-microsoft",
     },
     {
       id: 4,
-      title: "داشبورد تحلیل داده",
-      description: "داشبورد تحلیل داده با نمودارهای پیشرفته و فیلترهای متنوع",
-      image: "/placeholder.svg?height=300&width=400",
+      title: "Panel Admin",
+      description: "panel admin",
+      image:"/images/panelAdmin.png",
       category: "dashboard",
-      technologies: ["React", "ApexCharts", "Material UI"],
-      link: "/portfolio/data-analytics",
-      demoLink: "https://analytics-demo.example.com",
+      technologies: [ "react.js"],
+      link: "https://admin-panel-koushki-io.vercel.app/Home",
+      demoLink: "https://admin-panel-koushki-io.vercel.app/Home/",
+      githubLink: "https://github.com/mahdiyarKoushki/admin-panel",
     },
     {
       id: 5,
-      title: "نمایشگر چارت‌های سه‌بعدی",
-      description: "نمایش انواع چارت‌های سه‌بعدی با قابلیت تعامل",
-      image: "/placeholder.svg?height=300&width=400",
-      category: "chart",
-      technologies: ["Three.js", "D3.js", "React"],
-      link: "/portfolio/3d-charts",
-      demoLink: "https://3d-charts-demo.example.com",
+      title: " سبد  خرید ",
+      description: " سبد  خرید ",
+      image:"/images/production.png",
+      category: "dashboard",
+      technologies: [ "react.js"],
+      link: "https://cart-react-redux-9ni9kltg8-koushki-io.vercel.app/products",
+      demoLink: "https://cart-react-redux-9ni9kltg8-koushki-io.vercel.app/products/",
+      githubLink: "https://github.com/mahdiyarKoushki/cart-redux?tab=readme-ov-file",
     },
-    {
-      id: 6,
-      title: "اپلیکیشن مدیریت وظایف",
-      description: "اپلیکیشن مدیریت وظایف با قابلیت‌های پیشرفته",
-      image: "/placeholder.svg?height=300&width=400",
-      category: "web",
-      technologies: ["React", "Redux", "Firebase"],
-      link: "/portfolio/task-manager",
-      demoLink: "https://task-manager-demo.example.com",
-    },
+    
+
   ]
 
   return (
@@ -83,18 +74,6 @@ export default function PortfolioPage() {
           در این بخش می‌توانید نمونه‌هایی از پروژه‌های انجام شده توسط من را مشاهده کنید. هر پروژه با استفاده از تکنولوژی‌های
           مختلف و برای اهداف متفاوتی طراحی و پیاده‌سازی شده است.
         </p>
-      </div>
-
-      {/* Categories */}
-      <div className="flex flex-wrap justify-center gap-2 mb-10">
-        {categories.map((category) => (
-          <button
-            key={category.id}
-            className="px-4 py-2 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700 transition-colors"
-          >
-            {category.name}
-          </button>
-        ))}
       </div>
 
       {/* Projects Grid */}
@@ -129,20 +108,23 @@ export default function PortfolioPage() {
               <div className="flex justify-between">
                 <Link
                   href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-600 dark:text-blue-400 font-medium flex items-center hover:underline"
                 >
                   جزئیات بیشتر
                   <ArrowRight className="mr-2" size={16} />
                 </Link>
-                <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 dark:text-blue-400 font-medium flex items-center hover:underline"
-                >
-                  نسخه نمایشی
-                  <ExternalLink className="mr-2" size={16} />
-                </a>
+                {project.githubLink && (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  >
+                    <Github size={24} />
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -166,4 +148,3 @@ export default function PortfolioPage() {
     </div>
   )
 }
-
